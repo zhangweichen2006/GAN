@@ -28,7 +28,7 @@ def usps_initialisation(sets,add_pad=False):
             new_img_set[counter] = new_img
             counter += 1                               
 
-    set_img = (new_img_set.reshape(new_img_set.shape[0], 28, 28, 1).astype('float32'))/255.
+    set_img = (new_img_set.reshape(new_img_set.shape[0], 784).astype('float32'))/255.
 
     set_label_vec = np.zeros((len(set_label), 10), dtype=np.float)
     for i, label in enumerate(set_label):
